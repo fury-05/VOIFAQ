@@ -100,4 +100,49 @@ The lockup period varies depending on how many years each individual selected to
 
 ---
 
+### Q. How do I keep my node healthy?
+**Ans.** It's essential to regularly monitor the health of your node. You can use tools like Voi CLI to check system metrics, node status, and participation key validity. Keeping an eye on CPU usage, disk space, and network bandwidth will help ensure that your node stays online and performs optimally. You can also use the Voi Checker tool to automate some of this monitoring.
+
+Commands:
+```bash
+~/voi/bin/get-node-status
+```
+- For participation key expiration:
+```bash
+~/voi/bin/generate-participation-key <account_address>
+```
+- Ensure to use the latest cli tools and stay updated to avoid problems with key expiration​.
+---
+
+### Q. What happens if my participation key expires?
+**Ans.** When your participation key expires, your node stops participating in the network, which can affect both its performance and your rewards. To fix this, generate a new participation key using the command:
+```bash
+~/voi/bin/generate-participation-key <account_address>
+```
+- Ensure the new key is applied and check your node's status again​(
+
+---
+
+### Q. How can I check my node's health in real time?
+**Ans.** You can use Voi CLI or third-party monitoring tools like Voi Node Health Checker or Voi Proposer Data. These tools allow you to track metrics like node participation, GUID, and network health in real time. It’s advisable to monitor these weekly to ensure your node is performing well and participating correctly
+- [NODE DASHBOARD](https://voi-nodes.dev/)
+- [24 Hrs Data Chris Api] (https://cswenor.github.io/voi-proposer-data/index.html)
+---
+
+### Q. How do I restart my node if it's stuck?
+**Ans.*** If your node is not responding or stuck in an offline state, restarting it may help. Use the following command:
+```bash
+~/voi/bin/goal node restart
+```
+- This will restart your node and clear any potential issues preventing it from syncing​.
+
+---
+
+### Q. What are the node running options in Voi?
+**Ans.** Voi offers multiple ways to run a node depending on your hardware and technical capabilities:
+
+Voi Swarm for Linux-based systems with a single command install.
+Aust’s 1-Click Node for Windows, MacOS, and Linux, which provides a more graphical interface for easy setup,
+
+---
 
