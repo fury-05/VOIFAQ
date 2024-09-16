@@ -182,7 +182,9 @@ Check if telemetry is enabled and true.
 ```~/voi/bin/get-telemetry-status```
 
 - Then Login to new vps and use import existing wallet command 
-```export VOINETWORK_IMPORT_ACCOUNT=1
+
+```
+export VOINETWORK_IMPORT_ACCOUNT=1
 /bin/bash -c "$(curl -fsSL https://get.voi.network/swarm)"
 ```
 
