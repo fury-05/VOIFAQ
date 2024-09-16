@@ -146,3 +146,55 @@ Aust’s 1-Click Node for Windows, MacOS, and Linux, which provides a more graph
 
 ---
 
+### Q. User is running Windows OS and Ubunt on Virtual Machine.
+**Ans.** VOI swarm doest not suppport this kind of virtulization you need to have a machine with ubunt installed on it directly.
+
+---
+
+### Q. My node score is low ?
+**Ans.** Check the hosting provider first if its Contabo then ask user to change it.
+Check VOI in address connected to node you need minimum 2100VOI
+Check if telemetry is enabled and true.
+
+---
+
+### Q. How to Removing Your Installation ?
+**Ans.** To uninstall, execute the following commands:
+- Leave the Swarm
+```docker swarm leave --force```
+- Remove the ~/voi directory
+```rm -rf ~/voi/```
+- Remove the /var/lib/voi directory
+```rm -rf /var/lib/voi```
+
+---
+
+### Q. If user are not able to login in VPS ?
+**Ans.** Ask them to contact hosting provider support for login vps problem and SSH key problem.
+
+---
+
+### Q. I want to migrate my node to diffrent vps ?
+**Ans.** First login to existing vps and take backup of Wallet phrase if not already taken. Then take backup of long GUID version using following commands :
+- For Wallet phrase 
+```~/voi/bin/get-account-mnemonic <account_address>```
+- For GUID
+```~/voi/bin/get-telemetry-status```
+
+- Then Login to new vps and use import existing wallet command 
+```export VOINETWORK_IMPORT_ACCOUNT=1
+/bin/bash -c "$(curl -fsSL https://get.voi.network/swarm)"```
+
+- Name its Telemetry as same before 
+- Continue with prompts 
+- Create a password for wallet 
+- Enter Wallet Phrase of old address
+- Let blocks Catch up
+- Now run Telemetry and guid set command 
+```~/voi/bin/set-telemetry-name <telemetry_name> <telemetry_guid>```
+- Check using node status command 
+```~/voi/bin/get-node-status```
+- If all is online no problem is you get any error refer above trouble shooting.
+
+---
+
